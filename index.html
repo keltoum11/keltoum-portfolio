@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keltoum Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+<nav class="navbar">
+
+
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#internships">Internships</a>
+<a href="#activities">Leadership & Activities</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+
+<div class="hero-text">
+<p class="small-title">HELLO, I'M</p>
+
+<h1>KELTOUM <br><span>LARBAOUI</span></h1>
+
+<h3>Electrical Engineering Student</h3>
+
+<p class="description">
+Embedded Systems • IoT Projects • Smart Solutions • Creative Designer
+</p>
+
+<div class="buttons">
+<a href="#projects" class="btn">View Projects</a>
+<a href="#contact" class="btn-outline">Contact Me</a>
+</div>
+</div>
+
+<div class="hero-glow"></div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    I am Keltoum Larbaoui, an Electrical Engineering student at ENPO, specializing in electronics and embedded systems . I am passionate about designing smart solutions that integrate hardware and software to solve real-world challenges.     
+  </p>
+  <p>
+    My technical journey includes working with microcontrollers like PIC16F877, communication protocols (I2C, SPI, UART), and PCB design . I am continuously expanding my knowledge in C/C++, FreeRTOS, and system-level debugging. Beyond academics, I am an active member of the Muhandis Scientific Club, where I participate in technical workshops and organize engineering events.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2>skills</h2>
+
+  <div class="skills-detailed">
+    <div class="skill-item">
+      <div class="skill-info">
+        <span>Embedded Systems</span>
+        <span>60%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 60%;"></div>
+      </div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-info">
+        <span>Communication (I2C, SPI, UART)</span>
+        <span>70%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 70%;"></div>
+      </div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-info">
+        <span>PCB Design (Proteus)</span>
+        <span>30%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 30%;"></div>
+      </div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-info">
+        <span>HTML / CSS / JavaScript</span>
+        <span>50%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 50%;"></div>
+      </div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-info">
+        <span>C / C++</span>
+        <span>50%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 50%;"></div>
+      </div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-info">
+        <span>IoT Systems</span>
+        <span>50%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 50%;"></div>
+      </div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-info">
+        <span>RTOS (FreeRTOS)</span>
+        <span>50%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2>My Projects</h2>
+
+  <div class="projects-container">
+    <!-- Projet 1 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="images/smart-room.jpg" alt="Smart Room Monitoring">
+      </div>
+      <div class="project-info">
+        <h3>Smart Room Monitoring</h3>
+        <p>IoT system for monitoring temperature, humidity, and gas levels.</p>
+        <div class="project-tags">
+          <span>ESP32</span>
+          <span>IoT</span>
+        </div>
+        <button class="btn-project" onclick="openProjectModal('smart-room')">see more</button>
+      </div>
+    </div>
+
+    <!-- Projet 2 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="images/solar-tracker.jpg" alt="Solar Tracker">
+      </div>
+      <div class="project-info">
+        <h3>Solar Tracker</h3>
+        <p>Automatic solar tracking system to maximize energy efficiency.</p>
+        <div class="project-tags">
+          <span>Arduino</span>
+          <span>Sensors</span>
+        </div>
+        <button class="btn-project" onclick="openProjectModal('solar-tracker')">see more</button>
+      </div>
+    </div>
+
+    <!-- Projet 3: Smart Bin -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="images/smart-bin.jpg" alt="Smart Bin">
+      </div>
+      <div class="project-info">
+        <h3>Smart Bin</h3>
+        <p>Intelligent waste management system using ESP32 and FreeRTOS.</p>
+        <div class="project-tags">
+          <span>ESP32</span>
+          <span>FreeRTOS</span>
+          <span>IoT</span>
+        </div>
+        <button class="btn-project" onclick="openProjectModal('smart-bin')">see more</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERNSHIPS -->
+<section id="internships" class="section">
+  <h2>Internships</h2>
+
+  <div class="internships-wrapper">
+    <!-- Partie gauche : descriptions -->
+    <div class="internships-content">
+      <div class="internship-card-detail">
+        <h3>SAIGE Spa</h3>
+        <p><strong>Period:</strong> </p>
+        <p>Discovered transmission lines and electrical infrastructure. Worked on smart meters, quality control processes, and electrical production systems. Gained hands-on experience in power systems and industrial equipment monitoring.</p>
+      </div>
+
+      <div class="internship-card-detail">
+        <h3>SOPHAL Spa</h3>
+        <p><strong>Period:</strong> </p>
+        <p>Worked on industrial electrical systems and automation. Observed and assisted in equipment maintenance, automation workflows, and control systems. Learned about PLC basics and industrial communication protocols.</p>
+      </div>
+
+      <div class="internship-card-detail">
+        <h3>MOBILIS</h3>
+        <p><strong>Project:</strong> Smart Access Control System</p>
+        <p>Worked on a smart access control project using RFID technology. Responsible for hardware integration, testing, and documentation. Gained experience in security systems and embedded authentication.</p>
+      </div>
+
+      <div class="internship-card-detail">
+        <h3>ENIE</h3>
+        <p><strong>Department:</strong> Maintenance</p>
+        <p>Worked in the maintenance department, learning about preventive and corrective maintenance of industrial equipment. Understood the importance of reliability and safety in industrial environments.</p>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section id="activities" class="section">
+  <h2>Leadership & Activities</h2>
+
+  <div class="projects-container">
+    <!-- Carte 1: Muhandis Club -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="images/muhandis-logo.png" alt="Muhandis Logo">
+      </div>
+      <div class="project-info">
+        <h3>Muhandis Scientific Club</h3>
+        <p>Active member at ENPO, organizing engineering events and competitions.</p>
+        <div class="project-tags">
+          <span>Leadership</span>
+          <span>Event Organization</span>
+          <span>Teamwork</span>
+        </div>
+        <button class="btn-project" onclick="openClubModal()">see more</button>
+      </div>
+    </div>
+
+    <!-- Carte 2: Social Media Gallery -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="images/ps.png" alt="Social Media Gallery">
+      </div>
+      <div class="project-info">
+        <h3>Social Media posts</h3>
+        <p>Social media designs for events posts .</p>
+        <div class="project-tags">
+          <span>graphic design</span>
+          <span>photoshop</span>
+          
+        </div>
+        <button class="btn-project" onclick="openGalleryModal()">see more</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL pour Projets -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeProjectModal()">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- MODAL pour Club ENPO -->
+<div id="clubModal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeClubModal()">&times;</span>
+    <div id="club-modal-body"></div>
+  </div>
+</div>
+
+<!-- MODAL pour Galerie Photo (Slider) -->
+<div id="galleryModal" class="modal">
+  <div class="modal-content" style="max-width: 650px;">
+    <span class="modal-close" onclick="closeGalleryModal()">&times;</span>
+    <div style="text-align: center; padding: 1rem;">
+      <div style="position: relative;">
+        <img id="sliderImage" src="" alt="Gallery Image" style="width: 100%; border-radius: 20px; max-height: 500px; object-fit: cover;">
+        
+        <button class="slider-btn" id="prevBtn" onclick="changeImage(-1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 20px;">&#10094;</button>
+        <button class="slider-btn" id="nextBtn" onclick="changeImage(1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 20px;">&#10095;</button>
+      </div>
+      
+      <div style="margin-top: 1rem;">
+        <span id="imageCounter" style="color: #8aa2ff; font-size: 0.9rem;"></span>
+      </div>
+      
+      <div id="thumbnails" style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;"></div>
+      
+      <button class="btn-project" onclick="closeGalleryModal()" style="margin-top: 1.5rem;">Fermer</button>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Email: larbaouikeltoum6@email.com</p>
+  <div class="buttons">
+    <a href="https://linkedin.com/in/keltoum-larbaoui" class="btn">LinkedIn</a>
+    <a href="https://github.com/keltoum11" class="btn-outline">GitHub</a>
+  </div>
+</section>
+
+<script>
+  // ==================== DONNÉES DES PROJETS ====================
+  const projectsData = {
+    'smart-room': {
+      title: 'Smart Room Monitoring',
+      fullDescription: 'Ce projet vise à renforcer la sécurité et le confort des espaces intérieurs en combinant un système de surveillance environnementale en temps réel et une gestion intelligente des paramètres ambiants. Le système repose sur une supervision continue de multiples capteurs permettant de surveiller les conditions de la pièce, telles que la température, l\'humidité, les niveaux de gaz, ainsi que la détection de présence ou d\'éventuelles anomalies (fumée, fuite de gaz, chaleur excessive, etc.). Une fois les données collectées, elles sont traitées localement par un microcontrôleur et peuvent être visualisées à distance via une interface web dédiée. Sur le plan technique, le projet intègre des éléments d\'électronique embarquée et d\'automatisation, notamment : l\'utilisation de microcontrôleurs (ESP32) pour la gestion des capteurs et des actionneurs, des capteurs de température/humidité (DHT22), des capteurs de gaz (MQ-135, MQ-2), ainsi qu\'un système d\'affichage local et une interface de monitoring connectée. Ce projet m\'a permis de renforcer mes compétences en : conception de systèmes embarqués, intégration de capteurs et modules IoT, communication sans fil (WiFi, MQTT), logique de contrôle et automatisation, ainsi que la compréhension des systèmes de monitoring utilisés dans les environnements industriels et résidentiels. En conclusion, ce projet m\'a offert une expérience concrète dans la mise en place d\'un système intelligent de surveillance et de gestion environnementale, combinant électronique, programmation et analyse de données en temps réel.',
+      technologies: 'ESP32, DHT22, MQ-135 (gaz), MQTT, Dashboard Web, Alertes temps réel'
+    },
+    'solar-tracker': {
+      title: 'Solar Tracker',
+      fullDescription: 'The solar tracker is an automatic system that follows the direction of sunlight to maximize energy efficiency. The system uses two light-dependent resistors (LDRs) placed on the left and right sides of the solar panel. These sensors measure the intensity of light from different directions. The microcontroller (Arduino) reads the values from both LDRs and calculates the difference between them. If the left LDR detects more light than the right one, the servo motor rotates the panel to the left. If the right LDR detects more light, the panel rotates to the right. This process continues in a closed loop until both LDRs receive equal light, meaning the panel is perfectly aligned with the sun. The project demonstrates key concepts such as analog signal reading, sensor calibration, motor control, and real-time decision making. This project helped me improve my skills in embedded programming, analog-to-digital conversion, servo motor control, and closed-loop systems. In conclusion, the solar tracker is a practical application of using sensors and actuators to create an intelligent system that responds to environmental changes.',
+      technologies: 'Arduino Uno, LDR x2, Servo Motor, Analog-to-Digital Converter (ADC), Closed-loop control'
+    },
+    'smart-bin': {
+  title: 'Smart Bin - Intelligent Waste Management',
+  fullDescription: 'The Smart Bin is an intelligent waste management system that automatically detects and sorts waste using sensors and real-time operating system concepts. The system is built around an ESP32 microcontroller running FreeRTOS, which allows multiple tasks to run concurrently: ultrasonic sensor for fill-level detection, servo motor for lid control, gas sensor for odor monitoring, and WiFi communication for cloud alerts. When the bin reaches a certain fill level, the system sends a notification to a central server. The FreeRTOS implementation ensures real-time response for critical tasks like overflow detection, while background tasks handle data logging and cloud synchronization. This project demonstrates advanced embedded concepts such as task scheduling, inter-task communication using queues, semaphores for resource management, and power optimization using deep sleep modes. The system also includes a mobile application interface for monitoring multiple bins remotely. This project helped me deepen my understanding of real-time operating systems, multi-tasking on microcontrollers, and end-to-end IoT system design.',
+  technologies: 'ESP32, FreeRTOS, Ultrasonic Sensor (HC-SR04), MQ-135 Gas Sensor, Servo Motor, WiFi, MQTT, Mobile App Integration'
+    },
+  };
+
+  // ==================== FONCTIONS MODAL PROJETS ====================
+  function openProjectModal(projectId) {
+    const project = projectsData[projectId];
+    const modal = document.getElementById('projectModal');
+    const modalBody = document.getElementById('modal-body');
+    
+    if (project) {
+      modalBody.innerHTML = `
+        <h2 class="modal-project-title">${project.title}</h2>
+        <p class="modal-project-detail">${project.fullDescription}</p>
+        <p class="modal-project-detail"><strong>Technologies :</strong> ${project.technologies}</p>
+        <button class="btn-project" onclick="closeProjectModal()" style="margin-top: 1rem;">Fermer</button>
+      `;
+    }
+    modal.style.display = 'flex';
+  }
+
+  function closeProjectModal() {
+    document.getElementById('projectModal').style.display = 'none';
+  }
+
+  // ==================== MODAL CLUB ====================
+  function openClubModal() {
+    const modal = document.getElementById('clubModal');
+    const modalBody = document.getElementById('club-modal-body');
+    
+    modalBody.innerHTML = `
+      <h2 class="modal-project-title">Muhandis Scientific Club - ENPO</h2>
+      <p class="modal-project-detail"><strong>Participation in Battlefield Event (4th & 5th editions):</strong> Organized technical competitions where students solve engineering challenges under pressure. Responsible for planning, team management, and ensuring smooth execution.</p>
+      <p class="modal-project-detail"><strong>Prepa Day 8 - Coordinator:</strong> Major academic event helping first-year students choose their engineering specialty. More than 200 students participated. My role included planning the schedule, inviting speakers, managing volunteers, and guiding students through the orientation process.</p>
+      <p class="modal-project-detail"><strong>Career X:</strong> Initiative helping students transition from academic to professional life. Organized workshops on CV writing, interview preparation, and networking with industry professionals.</p>
+      <p class="modal-project-detail"><strong>MHC Muhandis Hackathon Challenge:</strong> Organized a 24-hour hackathon where students built innovative projects. Contributed to defining challenges, mentoring participants, and judging final projects.</p>
+      <button class="btn-project" onclick="closeClubModal()" style="margin-top: 1rem;">Fermer</button>
+    `;
+    modal.style.display = 'flex';
+  }
+
+  function closeClubModal() {
+    document.getElementById('clubModal').style.display = 'none';
+  }
+
+  // ==================== GALERIE PHOTO (SLIDER) ====================
+  // Liste des photos - AJOUTE TES IMAGES ICI
+  const galleryImages = [
+    "images/DIM.png",
+    "images/MON.png",
+    "images/TUS.png",
+    "images/org.png",
+    "images/spe.png",
+    
+  ];
+
+  let currentImageIndex = 0;
+
+  function openGalleryModal() {
+    const modal = document.getElementById('galleryModal');
+    if (galleryImages.length === 0) {
+      alert("Aucune photo disponible. Ajoute des images dans la liste galleryImages");
+      return;
+    }
+    modal.style.display = 'flex';
+    currentImageIndex = 0;
+    updateSlider();
+  }
+
+  function closeGalleryModal() {
+    document.getElementById('galleryModal').style.display = 'none';
+  }
+
+  function changeImage(direction) {
+    currentImageIndex += direction;
+    if (currentImageIndex < 0) {
+      currentImageIndex = galleryImages.length - 1;
+    }
+    if (currentImageIndex >= galleryImages.length) {
+      currentImageIndex = 0;
+    }
+    updateSlider();
+  }
+
+  function updateSlider() {
+    const sliderImg = document.getElementById('sliderImage');
+    const counter = document.getElementById('imageCounter');
+    const thumbnailsDiv = document.getElementById('thumbnails');
+    
+    if (sliderImg && galleryImages.length > 0) {
+      sliderImg.src = galleryImages[currentImageIndex];
+      counter.innerHTML = `Image ${currentImageIndex + 1} / ${galleryImages.length}`;
+      
+      thumbnailsDiv.innerHTML = '';
+      galleryImages.forEach((img, index) => {
+        const thumb = document.createElement('img');
+        thumb.src = img;
+        thumb.style.width = '50px';
+        thumb.style.height = '50px';
+        thumb.style.objectFit = 'cover';
+        thumb.style.borderRadius = '8px';
+        thumb.style.cursor = 'pointer';
+        thumb.style.border = index === currentImageIndex ? '2px solid #6c8eff' : '1px solid #2a3560';
+        thumb.onclick = () => {
+          currentImageIndex = index;
+          updateSlider();
+        };
+        thumbnailsDiv.appendChild(thumb);
+      });
+    }
+  }
+
+  // ==================== FERMETURE DES MODALS (CLIC EN DEHORS) ====================
+  window.onclick = function(event) {
+    const projectModal = document.getElementById('projectModal');
+    const clubModal = document.getElementById('clubModal');
+    const galleryModal = document.getElementById('galleryModal');
+    
+    if (event.target === projectModal) closeProjectModal();
+    if (event.target === clubModal) closeClubModal();
+    if (event.target === galleryModal) closeGalleryModal();
+  }
+  
+</script>
+
+</body>
+</html>
