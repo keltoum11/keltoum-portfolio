@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Keltoum Larbaoui | Electrical Engineering Portfolio</title>
+
+<!-- Google Fonts & Font Awesome Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+   font-family: 'Inter', sans-serif;
+  background-color: #070b17;
+  color: #eef2ff;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  padding-top: 70px;  /* Important ! Évite que le contenu soit sous la navbar */
+  overflow-x: hidden;  /* Supprime la barre de défilement horizontale */
+  width: 100%;
+  }
+
+  /* custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #101624;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3b4b9e;
+    border-radius: 10px;
+  }
+
+  /* container utility */
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+ /* ========== NAVBAR ========== */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(7, 11, 23, 0.95);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 1px solid rgba(59, 75, 158, 0.3);
+  transition: all 0.3s ease;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-links a {
+  color: #cdd9ff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: white;
+  border-bottom-color: #6c8eff;
+}
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #c0e0ff, #9b7eff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.8rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    color: #cdd9ff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+  }
+
+  .nav-links a:hover {
+    color: white;
+    border-bottom-color: #6c8eff;
+  }
+
+  /* ========== HERO SECTION ========== */
+  .hero {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  }
+
+  .hero-text {
+    max-width: 800px;
+    z-index: 2;
+  }
+
+  .small-title {
+    font-size: 1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #9bb6ff;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 span {
+    background: linear-gradient(120deg, #eef2ff, #b9ceff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hero h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #cad2ff;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    color: #a3b3e0;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    background: #3b4b9e;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    box-shadow: 0 8px 18px rgba(59, 75, 158, 0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .btn:hover {
+    background: #4f62c2;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(79, 98, 194, 0.3);
+  }
+
+  .btn-outline {
+    background: transparent;
+    border: 1.5px solid #6c7ed6;
+    color: #e0e7ff;
+    padding: 0.8rem 1.8rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+  }
+
+  .btn-outline:hover {
+    background: rgba(108, 126, 215, 0.15);
+    border-color: #9bb0ff;
+    transform: translateY(-2px);
+  }
+
+  /* glow effect */
+  .hero-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(59,75,158,0.25) 0%, rgba(7,11,23,0) 70%);
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 50%;
+  }
+
+  /* sections global */
+  .section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(72, 92, 168, 0.2);
+  }
+
+  .section:last-child {
+    border-bottom: none;
+  }
+
+  .section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #fff, #b4c6ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    letter-spacing: -0.5px;
+    border-left: 5px solid #6c8eff;
+    padding-left: 1.2rem;
+  }
+
+  /* about paragraph */
+  #about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    color: #cbd5ff;
+    line-height: 1.6;
+  }
+  /* ========== PROJECTS SECTION (comme dans l'image) ========== */
+/* Projects container - Responsive 3 cards */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project-card {
+  background: #0f1429;
+  border-radius: 24px;
+  overflow: hidden;
+  width: 320px;
+  flex: 1 1 280px;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #232e52;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px -12px rgba(0,0,0,0.5);
+  border-color: #6c8eff;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #e2ebff;
+}
+
+.project-info p {
+  color: #b7c3f0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.project-tags span {
+  background: #1f2a4e;
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #b9ceff;
+}
+
+.btn-project {
+  background: transparent;
+  border: 1.5px solid #6c8eff;
+  color: #6c8eff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-project:hover {
+  background: #6c8eff;
+  color: white;
+}
+
+/* Modal pour plus d'infos */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #0f1429;
+  border-radius: 28px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid #3b4b9e;
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #cdd9ff;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #ff6b6b;
+}
+
+#modal-body {
+  padding: 2rem;
+}
+
+.modal-project-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #e2ebff;
+}
+
+.modal-project-detail {
+  color: #b7c3f0;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+  /* skills container - modern chip style */
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .skill {
+    background: #121a2f;
+    padding: 0.7rem 1.5rem;
+    border-radius: 60px;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+    border: 1px solid #2a3560;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+  }
+
+  .skill:hover {
+    background: #1f2a4a;
+    border-color: #6c8eff;
+    transform: scale(1.02);
+  }
+
+  /* progress bars (extra style from original image) */
+  /* Skills detailed bars */
+/* Skills with label left and progress bar on same line */
+.skills-detailed {
+  background: #0e1428;
+  border-radius: 28px;
+  padding: 1.8rem;
+  border: 1px solid #222b4a;
+  margin-top: 1rem;
+}
+
+.skill-item {
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 220px;
+  gap: 1rem;
+}
+
+.skill-info span:first-child {
+  font-weight: 500;
+  color: #e2ebff;
+}
+
+.skill-info span:last-child {
+  color: #8aa2ff;
+  font-weight: 600;
+}
+
+.progress-bar {
+  background: #1f2744;
+  border-radius: 12px;
+  height: 8px;
+  flex: 1;
+  min-width: 150px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #6c8eff, #9b7eff);
+  height: 100%;
+  border-radius: 12px;
+}
+  /* ========== FIX POUR LES MODALS ========== */
+  
+  /* Pour toutes les images dans les modals */
+  .modal-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Pour l'image du slider */
+  #sliderImage {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    background: #070b17;
+    border-radius: 16px;
+  }
+
+  /* Pour les miniatures */
+  #thumbnails img {
+    width: 55px !important;
+    height: 55px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+  }
+
+  /* Pour le corps du modal club */
+  #club-modal-body {
+    padding: 2rem;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  /* Pour les paragraphes dans le modal club */
+  #club-modal-body .modal-project-detail {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-bottom: 1rem;
+  }
+
+  /* Pour le modal de la galerie */
+  #galleryModal .modal-content {
+    max-width: 700px;
+  }
+
+  /* Pour que le contenu du modal ne dépasse pas */
+  .modal-content {
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  
+  /* Empêcher les images de dépasser horizontalement */
+  .modal-content * {
+    max-width: 100%;
+  }
+ /* ========== INTERNSHIPS SECTION ========== */
+.internships-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+}
+
+.internships-content {
+  flex: 2;
+  min-width: 280px;
+}
+
+.internship-card-detail {
+  background: #0f1429;
+  border-radius: 20px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #232e52;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.internship-card-detail:hover {
+  border-color: #6c8eff;
+  transform: translateX(5px);
+}
+
+.internship-card-detail h3 {
+  font-size: 1.3rem;
+  color: #e2ebff;
+  margin-bottom: 0.3rem;
+}
+
+.internship-card-detail p {
+  color: #b7c3f0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.internship-card-detail p strong {
+  color: #8aa2ff;
+}
+
+/* Logos slider - sans background */
+.logos-slider {
+  flex: 1;
+  min-width: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.logos-track {
+  display: flex;
+  gap: 2rem;
+  animation: scrollLogos 12s linear infinite;
+}
+
+.logo-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: brightness(0.8) grayscale(0.2);
+  transition: filter 0.3s, transform 0.3s;
+  background: transparent;
+}
+
+.logo-img:hover {
+  filter: brightness(1) grayscale(0);
+  transform: scale(1.05);
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.logos-slider:hover .logos-track {
+  animation-play-state: paused;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .internships-wrapper {
+    flex-direction: column;
+  }
+  
+  .logos-slider {
+    width: 100%;
+  }
+  
+  .logo-img {
+    width: 60px;
+    height: 60px;
+  }
+}
+</section>
